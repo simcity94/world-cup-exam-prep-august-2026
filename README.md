@@ -13,3 +13,11 @@ JS Back-End exam preperation project
     [x] Add main layout
     [x] Render home page and remove statics
     [x] Implement controllers and routes
+
+## Register
+    [x] Add auth controller
+    [x] Render register page
+    [x] Add body parsing middleware and extract register form data
+    [x] Install zod and create register schema
+    [] 
+`

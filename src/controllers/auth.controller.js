@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { registerSchema } from '../schemas/auth.schema.js';
 
 const authController = Router();
 
@@ -7,9 +8,15 @@ authController.get('/register', (req, res) => {
 });
 
 authController.post('/register', (req, res) => {
-    console.log(req.body);
 
-    res.redirect('/');
+    try {
+        const userData = registerSchema.parse(req.body);
+    
+        res.redirect('/');
+        
+    } catch (error) {
+        
+    }
 });
 
 export default authController;
