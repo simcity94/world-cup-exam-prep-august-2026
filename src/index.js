@@ -8,6 +8,8 @@ app.engine('hbs', engine({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 
+app.use(express.urlencoded());
+
 app.use(express.static('src/public'));
 
 app.use(routes);

@@ -6,4 +6,10 @@ authController.get('/register', (req, res) => {
     res.render('auth/register');
 });
 
+authController.post('/register', (req, res) => {
+    console.log(req.body);
+
+    res.redirect('/');
+});
+
 export default authController;
