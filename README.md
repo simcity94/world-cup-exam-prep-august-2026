@@ -27,3 +27,15 @@ JS Back-End exam preperation project
     [x] Redirect to home page after successful registration
     [x] Add authentication via jsonwebtoken and login user automatically after registration
 
+## Login
+    [x] Render login page
+    [x] Execute login logic and validate user credentials
+    [x] Add error handling and keep email in the form
+    [x] Redirect to home page after successful login
+
+## Logout
+    [] Implement logout functionality
+
+
+    
+

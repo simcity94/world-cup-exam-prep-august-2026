@@ -5,3 +5,18 @@ export function createUser(userData) {
         data: userData
     });
 }
+
+export async function findByEmail(email) {
+    const user = await prisma.user.findUnique({
+        where: { email }
+    });
+
+    return user;
+}
+
+const userRepository = {
+    createUser,
+    findByEmail
+};
+
+export default userRepository;
