@@ -34,8 +34,13 @@ JS Back-End exam preperation project
     [x] Redirect to home page after successful login
 
 ## Logout
-    [] Implement logout functionality
+    [x] Implement logout functionality
 
+## Route Guards
+    [x] Create middleware for route guards
+    [x] Implement route guards for register, login and logout routes
+    [] Implement route guards for dynamic routes
+    [] Implement route guards for Add Match, Edit Match and Delete Match routes
 
     
 

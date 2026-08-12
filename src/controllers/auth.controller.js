@@ -2,14 +2,15 @@ import { Router } from 'express';
 import { getErrorMessage } from '../utils/errorUtils.js';
 import authService, { loginUser, registerUser } from '../services/auth.service.js';
 import { createAuthToken } from '../utils/token.js';
+import { isAuthenticated, isGuest } from '../middlewares/auth.middleware.js';
 
 const authController = Router();
 
-authController.get('/register', (req, res) => {
+authController.get('/register', isGuest, (req, res) => {
     res.render('auth/register');
 });
 
-authController.post('/register', async (req, res) => {
+authController.post('/register', isGuest, async (req, res) => {
 
     try {
 
@@ -28,11 +29,11 @@ authController.post('/register', async (req, res) => {
     }
 });
 
-authController.get('/login', (req, res) => {
+authController.get('/login', isGuest, (req, res) => {
     res.render('auth/login');
 });
 
-authController.post('/login', async (req, res) => {
+authController.post('/login', isGuest, async (req, res) => {
 
     try {
         const { email, password } = req.body;
@@ -52,7 +53,7 @@ authController.post('/login', async (req, res) => {
     }
 });
 
-authController.get('/logout', (req, res) => {
+authController.get('/logout', isAuthenticated,  (req, res) => {
     res.clearCookie('auth');
     res.redirect('/');
 });
