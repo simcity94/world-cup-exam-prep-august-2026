@@ -42,5 +42,8 @@ JS Back-End exam preperation project
     [] Implement route guards for dynamic routes
     [] Implement route guards for Add Match, Edit Match and Delete Match routes
 
-    
+## Add Match
+    [x] Render Add Match page
+    [] Implement Add Match logic and save match in the database
+    [] Redirect to home page after successful match creation
 
