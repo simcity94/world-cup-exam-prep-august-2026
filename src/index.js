@@ -1,5 +1,6 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
+import routes from './routes.js';
 
 const app = express();
 
@@ -9,8 +10,6 @@ app.set('views', 'src/views');
 
 app.use(express.static('src/public'));
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
+app.use(routes)
 
 app.listen(3000, () => {console.log('Server is running on http://localhost:3000...')});

@@ -12,4 +12,4 @@ JS Back-End exam preperation project
 ## Initialize home page
     [x] Add main layout
     [x] Render home page and remove statics
-
+    [x] Implement controllers and routes
