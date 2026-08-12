@@ -8,10 +8,12 @@ authController.get('/register', (req, res) => {
     res.render('auth/register');
 });
 
-authController.post('/register', (req, res) => {
+authController.post('/register', async (req, res) => {
 
     try {
-        const userData = registerSchema.parse(req.body);
+        const userData = await registerSchema.parseAsync(req.body);
+
+        console.log('User data after validation and transformation:', userData);
     
         res.redirect('/');
         

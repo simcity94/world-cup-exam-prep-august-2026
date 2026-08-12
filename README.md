@@ -21,4 +21,4 @@ JS Back-End exam preperation project
     [x] Install zod and create register schema
     [x] Add error utility and implement in auth controller
     [x] If validation fails keep email in the form
-`
+    [x] Add async password hashing using bcrypt
