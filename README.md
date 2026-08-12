@@ -19,5 +19,6 @@ JS Back-End exam preperation project
     [x] Render register page
     [x] Add body parsing middleware and extract register form data
     [x] Install zod and create register schema
+    [x] Add error utility and implement in auth controller
     [] 
 `

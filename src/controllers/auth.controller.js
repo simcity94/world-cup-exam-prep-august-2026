@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { registerSchema } from '../schemas/auth.schema.js';
+import { getErrorMessage } from '../utils/errorUtils.js';
 
 const authController = Router();
 
@@ -15,7 +16,8 @@ authController.post('/register', (req, res) => {
         res.redirect('/');
         
     } catch (error) {
-        
+        const errorMessage = getErrorMessage(error);
+        res.status(400).render('auth/register', { error: errorMessage});
     }
 });
 
