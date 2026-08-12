@@ -38,12 +38,15 @@ JS Back-End exam preperation project
 
 ## Route Guards
     [x] Create middleware for route guards
+    [x] Add middleware to index.js
     [x] Implement route guards for register, login and logout routes
     [] Implement route guards for dynamic routes
     [] Implement route guards for Add Match, Edit Match and Delete Match routes
 
 ## Add Match
     [x] Render Add Match page
+    [x] Redirect to Dashboard after successful match creation
+    [] Keep data from Add Match form on the page if unsuccesfull
     [] Implement Add Match logic and save match in the database
-    [] Redirect to home page after successful match creation
+
 
