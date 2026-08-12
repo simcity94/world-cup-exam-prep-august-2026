@@ -17,7 +17,7 @@ authController.post('/register', (req, res) => {
         
     } catch (error) {
         const errorMessage = getErrorMessage(error);
-        res.status(400).render('auth/register', { error: errorMessage});
+        res.status(400).render('auth/register', { error: errorMessage, user: req.body });
     }
 });
 
