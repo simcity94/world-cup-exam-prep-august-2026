@@ -46,7 +46,7 @@ JS Back-End exam preperation project
 ## Add Match
     [x] Render Add Match page
     [x] Redirect to Dashboard after successful match creation
-    [] Keep data from Add Match form on the page if unsuccesfull
-    [] Implement Add Match logic and save match in the database
+    [x] Keep data from Add Match form on the page if unsuccesfull
+    [x] Implement Add Match logic and save match in the database
 
 

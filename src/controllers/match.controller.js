@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { isAuthenticated } from '../middlewares/auth.middleware.js';
 import { getErrorMessage } from '../utils/errorUtils.js';
 import createMatchSchema from '../schemas/match.schema.js';
+import matchService from '../services/match.service.js';
 
 const matchController = Router();
 
@@ -10,11 +11,14 @@ matchController.get('/create', isAuthenticated, (req, res) => {
 }
 );
 
-matchController.post('/create', isAuthenticated, (req, res) => {
+matchController.post('/create', isAuthenticated, async (req, res) => {
   
+    const userId = req.user.id;
+
     try {
         const matchData = createMatchSchema.parse(req.body);
-        console.log('Match data validated successfully:', matchData);
+
+        await matchService.createMatch(matchData, userId);
         
         res.redirect('/match/dashboard');
     } catch (error) {
