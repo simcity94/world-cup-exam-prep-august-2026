@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { registerSchema } from '../schemas/auth.schema.js';
 import { getErrorMessage } from '../utils/errorUtils.js';
+import { registerUser } from '../services/auth.service.js';
 
 const authController = Router();
 
@@ -11,9 +11,8 @@ authController.get('/register', (req, res) => {
 authController.post('/register', async (req, res) => {
 
     try {
-        const userData = await registerSchema.parseAsync(req.body);
 
-        console.log('User data after validation and transformation:', userData);
+        const result = await registerUser(req.body);
     
         res.redirect('/');
         

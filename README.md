@@ -22,3 +22,6 @@ JS Back-End exam preperation project
     [x] Add error utility and implement in auth controller
     [x] If validation fails keep email in the form
     [x] Add async password hashing using bcrypt
+    [x] Install prisma ORM (change node to tsx)
+    [x] Save registered user in the database
+    [x] Redirect to home page after successful registration
