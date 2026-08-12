@@ -25,3 +25,5 @@ JS Back-End exam preperation project
     [x] Install prisma ORM (change node to tsx)
     [x] Save registered user in the database
     [x] Redirect to home page after successful registration
+    [x] Add authentication via jsonwebtoken and login user automatically after registration
+

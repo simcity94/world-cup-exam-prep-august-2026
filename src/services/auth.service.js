@@ -1,4 +1,4 @@
-import { createUser } from "../repositories/auth.repository.js";
+import { createUser } from "../repositories/user.repository.js";
 import { registerSchema } from "../schemas/auth.schema.js";
 
 export async function registerUser(userData) {

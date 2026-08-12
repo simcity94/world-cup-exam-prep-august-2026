@@ -5,4 +5,3 @@ export function createUser(userData) {
         data: userData
     });
 }
-
